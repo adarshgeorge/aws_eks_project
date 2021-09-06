@@ -1,0 +1,14 @@
+apiVersion: apps/v1 
+kind: Service
+apiVersion: v1
+metadata: 
+  name: kubedockerweb-service
+spec: 
+  selector: 
+    app: kubedockerweb
+  ports: 
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 31000
+  type: NodePort
